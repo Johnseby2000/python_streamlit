@@ -1,0 +1,148 @@
+import streamlit as st
+
+#title()
+st.title('My Portfolio')
+
+#header()
+st.header('About me')
+
+#subheading
+st.write('My name is john')
+st.write('I am full stack developer in python')
+
+st.header('My Skills')
+st.subheader('programming languages')
+st.write('Python','java','c','c++')
+st.header('Frameworks')
+st.write('Django')
+st.header('Database')
+st.write('Mysql','Postgressql')
+
+
+
+#
+# import mysql.connector
+#
+#
+# class BookListCreateRetrieveUpdateDelete:
+#
+#     def __init__(self):
+#         self.con = mysql.connector.connect(
+#             user='root',
+#             password='john',
+#             host='localhost',
+#             database='library_db'
+#         )
+#
+#         self.cursor = self.con.cursor()
+#
+#     # READ / LIST ALL BOOKS
+#     def list(self):
+#         query = "SELECT * FROM book"
+#
+#         self.cursor.execute(query)
+#
+#         data = self.cursor.fetchall()
+#
+#         if data:
+#             for book in data:
+#                 print(book)
+#         else:
+#             print("No records found")
+#
+#     # CREATE / INSERT BOOK
+#     def create(self,id, title, author, price, pages, language):
+#         query = """
+#         INSERT INTO book(id,title, author, price, pages, language)
+#         VALUES(%s,%s, %s, %s, %s, %s)
+#         """
+#
+#         data = (id,title, author, price, pages, language)
+#
+#         self.cursor.execute(query,data)
+#         self.con.commit()
+#
+#         print("Inserted data successfully")
+#
+#     # RETRIEVE / READ ONE BOOK
+#     def retrieve(self, id):
+#         query = "SELECT * FROM book WHERE id=%s"
+#
+#         data = (id,)
+#
+#         self.cursor.execute(query, data)
+#
+#         record = self.cursor.fetchone()
+#
+#         if record:
+#             print(record)
+#         else:
+#             print("No record found")
+#
+#     # DELETE BOOK
+#     def delete(self, id):
+#         query = "DELETE FROM book WHERE id=%s"
+#
+#         data = (id,)
+#
+#         self.cursor.execute(query, data)
+#         self.con.commit()
+#
+#         if self.cursor.rowcount > 0:
+#             print("Record deleted successfully")
+#         else:
+#             print("No record found")
+#
+#     # UPDATE BOOK
+#     def update(self, id, title, author, price, pages, language):
+#         query = """
+#         UPDATE book
+#         SET title=%s,
+#             author=%s,
+#             price=%s,
+#             pages=%s,
+#             language=%s
+#         WHERE id=%s
+#         """
+#
+#         data = (title, author, price, pages, language, id)
+#
+#         self.cursor.execute(query, data)
+#         self.con.commit()
+#
+#         if self.cursor.rowcount > 0:
+#             print("Record updated successfully")
+#         else:
+#             print("No record found")
+#
+# # CREATE OBJECT
+# book_instance = BookListCreateRetrieveUpdateDelete()
+#
+#
+# # LIST ALL BOOKS
+# book_instance.list()
+#
+# #
+# # # CREATE / INSERT A BOOK
+# book_instance.create(id=101,
+#     title='jilly',
+#     author='jom',
+#     price=400,
+#     pages=500,
+#     # language='English'
+# )
+#
+#
+# # RETRIEVE ONE BOOK
+# book_instance.retrieve(101)
+#
+# #
+# # UPDATE A BOOK
+# book_instance.update(
+#     101,
+#     'Jilly Updated',
+#     'Jom Updated',
+#     500,
+#     550,
+#     'English'
+# )
